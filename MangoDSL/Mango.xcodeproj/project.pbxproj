@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DEB6B1B1CBB12D3006FB319 /* ClassNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */; };
+		3DFC649F1CBA1F0C00B30144 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC649E1CBA1F0C00B30144 /* main.swift */; };
+		3DFC64A61CBA1F8800B30144 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC64A51CBA1F8800B30144 /* libclang.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3DFC64991CBA1F0C00B30144 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassNode.swift; sourceTree = "<group>"; };
+		3DFC649B1CBA1F0C00B30144 /* Mango */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mango; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFC649E1CBA1F0C00B30144 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3DFC64A51CBA1F8800B30144 /* libclang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libclang.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DFC64981CBA1F0C00B30144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFC64A61CBA1F8800B30144 /* libclang.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DFC64921CBA1F0C00B30144 = {
+			isa = PBXGroup;
+			children = (
+				3DFC64A51CBA1F8800B30144 /* libclang.dylib */,
+				3DFC649D1CBA1F0C00B30144 /* Mango */,
+				3DFC649C1CBA1F0C00B30144 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DFC649C1CBA1F0C00B30144 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC649B1CBA1F0C00B30144 /* Mango */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DFC649D1CBA1F0C00B30144 /* Mango */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC649E1CBA1F0C00B30144 /* main.swift */,
+				3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */,
+			);
+			path = Mango;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DFC649A1CBA1F0C00B30144 /* Mango */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DFC64A21CBA1F0C00B30144 /* Build configuration list for PBXNativeTarget "Mango" */;
+			buildPhases = (
+				3DFC64971CBA1F0C00B30144 /* Sources */,
+				3DFC64981CBA1F0C00B30144 /* Frameworks */,
+				3DFC64991CBA1F0C00B30144 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mango;
+			productName = Mango;
+			productReference = 3DFC649B1CBA1F0C00B30144 /* Mango */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DFC64931CBA1F0C00B30144 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "William Hester";
+				TargetAttributes = {
+					3DFC649A1CBA1F0C00B30144 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 3DFC64961CBA1F0C00B30144 /* Build configuration list for PBXProject "Mango" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DFC64921CBA1F0C00B30144;
+			productRefGroup = 3DFC649C1CBA1F0C00B30144 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DFC649A1CBA1F0C00B30144 /* Mango */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DFC64971CBA1F0C00B30144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DEB6B1B1CBB12D3006FB319 /* ClassNode.swift in Sources */,
+				3DFC649F1CBA1F0C00B30144 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3DFC64A01CBA1F0C00B30144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DFC64A11CBA1F0C00B30144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3DFC64A31CBA1F0C00B30144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/llvm/tools/clang/include";
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
+				PRODUCT_NAME = Mango;
+			};
+			name = Debug;
+		};
+		3DFC64A41CBA1F0C00B30144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/llvm/tools/clang/include";
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib";
+				PRODUCT_NAME = Mango;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DFC64961CBA1F0C00B30144 /* Build configuration list for PBXProject "Mango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFC64A01CBA1F0C00B30144 /* Debug */,
+				3DFC64A11CBA1F0C00B30144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DFC64A21CBA1F0C00B30144 /* Build configuration list for PBXNativeTarget "Mango" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFC64A31CBA1F0C00B30144 /* Debug */,
+				3DFC64A41CBA1F0C00B30144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DFC64931CBA1F0C00B30144 /* Project object */;
+}
