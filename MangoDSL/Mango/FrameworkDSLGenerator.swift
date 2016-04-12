@@ -35,25 +35,22 @@ class FrameworkDSLGenerator {
         getSubclasses("UIView")
         
         printBegin()
-        printExtensionFunctions()
+        printUIViewExtensionFunctions()
+        printUIViewControllerExtensionFunctions()
         printEnd()
     }
     
     private func printBegin() {
         var header = "// Generated code by Mango\n\n"
         header += "import UIKit\n\n"
-        header += "extension UIView {\n\n"
-        header += "    internal func addChild(view: UIView) {\n"
-        header += "        addSubview(view)\n"
-        header += "    }\n\n"
         print(header)
     }
     
     private func printEnd() {
-        var end = "}\n\n"
+        var end = ""
         end += "extension UIStackView {\n"
         end += "    override internal func addChild(view: UIView) {\n"
-        end += "        addSubview(view)\n"
+        end += "        addArrangedSubview(view)\n"
         end += "    }\n"
         end += "}\n"
         print(end)
@@ -73,8 +70,11 @@ class FrameworkDSLGenerator {
         return name.substringToIndex(ind).lowercaseString + name.substringFromIndex(ind)
     }
     
-    private func printExtensionFunctions() {
-        var functions = ""
+    private func printUIViewExtensionFunctions() {
+        var functions = "extension UIView {\n\n"
+        functions += "    internal func addChild(view: UIView) {\n"
+        functions += "        addSubview(view)\n"
+        functions += "    }\n\n"
         for clazz in viewsList {
             functions += "    func \(classNameToFunctionName(clazz))(views: (\(clazz)) -> ()) -> " +
                 "\(clazz) {\n"
@@ -84,6 +84,21 @@ class FrameworkDSLGenerator {
             functions += "        return view\n"
             functions += "    }\n\n"
         }
+        functions += "}\n"
+        print(functions)
+    }
+    
+    private func printUIViewControllerExtensionFunctions() {
+        var functions = "extension UIViewController {\n\n"
+        for clazz in viewsList {
+            functions += "    func \(classNameToFunctionName(clazz))(views: (\(clazz)) -> ()) {\n"
+//            functions += "        let view = \(clazz)()\n"
+//            functions += "        self.view = view\n"
+//            functions += "        views(view)\n"
+            functions += "        self.view.\(classNameToFunctionName(clazz))(views)\n"
+            functions += "    }\n\n"
+        }
+        functions += "}\n"
         print(functions)
     }
 
