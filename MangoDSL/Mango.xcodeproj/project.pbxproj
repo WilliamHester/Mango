@@ -10,6 +10,8 @@
 		3DEB6B1B1CBB12D3006FB319 /* ClassNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */; };
 		3DFC649F1CBA1F0C00B30144 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC649E1CBA1F0C00B30144 /* main.swift */; };
 		3DFC64A61CBA1F8800B30144 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC64A51CBA1F8800B30144 /* libclang.dylib */; };
+		5056F5BD4AA32946D95BAF50 /* FrameworkDSLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056FC5455F3D343BC677C6A /* FrameworkDSLGenerator.swift */; };
+		5056FE57748B2A20097CFA71 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056F546086DD2C2E4D2DBF8 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 		3DFC649B1CBA1F0C00B30144 /* Mango */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mango; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFC649E1CBA1F0C00B30144 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3DFC64A51CBA1F8800B30144 /* libclang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libclang.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib; sourceTree = DEVELOPER_DIR; };
+		5056F546086DD2C2E4D2DBF8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5056FC5455F3D343BC677C6A /* FrameworkDSLGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameworkDSLGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			children = (
 				3DFC649E1CBA1F0C00B30144 /* main.swift */,
 				3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */,
+				5056FC5455F3D343BC677C6A /* FrameworkDSLGenerator.swift */,
+				5056F546086DD2C2E4D2DBF8 /* Utils.swift */,
 			);
 			path = Mango;
 			sourceTree = "<group>";
@@ -128,6 +134,8 @@
 			files = (
 				3DEB6B1B1CBB12D3006FB319 /* ClassNode.swift in Sources */,
 				3DFC649F1CBA1F0C00B30144 /* main.swift in Sources */,
+				5056F5BD4AA32946D95BAF50 /* FrameworkDSLGenerator.swift in Sources */,
+				5056FE57748B2A20097CFA71 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
