@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D79DF0A1CBDF2EE004C6166 /* FrameworkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79DF091CBDF2EE004C6166 /* FrameworkParser.swift */; };
+		3D79DF0C1CBDF539004C6166 /* ClassParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79DF0B1CBDF539004C6166 /* ClassParser.swift */; };
 		3DEB6B1B1CBB12D3006FB319 /* ClassNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */; };
 		3DFC649F1CBA1F0C00B30144 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC649E1CBA1F0C00B30144 /* main.swift */; };
 		3DFC64A61CBA1F8800B30144 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC64A51CBA1F8800B30144 /* libclang.dylib */; };
@@ -27,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D79DF091CBDF2EE004C6166 /* FrameworkParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameworkParser.swift; sourceTree = "<group>"; };
+		3D79DF0B1CBDF539004C6166 /* ClassParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassParser.swift; sourceTree = "<group>"; };
 		3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassNode.swift; sourceTree = "<group>"; };
 		3DFC649B1CBA1F0C00B30144 /* Mango */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mango; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFC649E1CBA1F0C00B30144 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				3DEB6B1A1CBB12D3006FB319 /* ClassNode.swift */,
 				5056FC5455F3D343BC677C6A /* FrameworkDSLGenerator.swift */,
 				5056F546086DD2C2E4D2DBF8 /* Utils.swift */,
+				3D79DF091CBDF2EE004C6166 /* FrameworkParser.swift */,
+				3D79DF0B1CBDF539004C6166 /* ClassParser.swift */,
 			);
 			path = Mango;
 			sourceTree = "<group>";
@@ -132,8 +138,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D79DF0A1CBDF2EE004C6166 /* FrameworkParser.swift in Sources */,
 				3DEB6B1B1CBB12D3006FB319 /* ClassNode.swift in Sources */,
 				3DFC649F1CBA1F0C00B30144 /* main.swift in Sources */,
+				3D79DF0C1CBDF539004C6166 /* ClassParser.swift in Sources */,
 				5056F5BD4AA32946D95BAF50 /* FrameworkDSLGenerator.swift in Sources */,
 				5056FE57748B2A20097CFA71 /* Utils.swift in Sources */,
 			);

@@ -8,20 +8,26 @@ import Clang_C
 
 class FrameworkDSLGenerator {
 
-    private let frameworkPath = "/Applications/Xcode.app/Contents/Developer/Platforms/" +
+    private let iOSSDKFrameworkPath = "/Applications/Xcode.app/Contents/Developer/Platforms/" +
         	"iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/"
     let framework: String
     var classMap = Dictionary<String, Set<String>>()
     var viewsList = [String]()
 
-    init(framework: String) {
+    init(frameworkPath: String, framework: String) {
         self.framework = frameworkPath + framework + ".framework"
+    }
+    
+    convenience init(framework: String) {
+        self.init(frameworkPath: "/Applications/Xcode.app/Contents/Developer/Platforms/" +
+                      "iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/",
+                  framework: framework)
     }
     
     private func getSubclasses(type: String) {
         viewsList.append(type)
-        if classMap[type] != nil {
-            for clazz in classMap[type]! {
+        if let classes = classMap[type] {
+            for clazz in classes {
                 getSubclasses(clazz)
             }
         }
@@ -92,9 +98,6 @@ class FrameworkDSLGenerator {
         var functions = "extension UIViewController {\n\n"
         for clazz in viewsList {
             functions += "    func \(classNameToFunctionName(clazz))(views: (\(clazz)) -> ()) {\n"
-//            functions += "        let view = \(clazz)()\n"
-//            functions += "        self.view = view\n"
-//            functions += "        views(view)\n"
             functions += "        self.view.\(classNameToFunctionName(clazz))(views)\n"
             functions += "    }\n\n"
         }
@@ -126,7 +129,7 @@ class FrameworkDSLGenerator {
      * Map classes from superclass to subclasses
      */
     private func genClassTree(classMap: Dictionary<String, Set<String>>, headerFile: String) {
-        let indexCallback: (@convention(c) (CXClientData, UnsafePointer<CXIdxDeclInfo>) -> Void)! =
+        let indexCallback: (@convention(c) (CXClientData, UnsafePointer<CXIdxDeclInfo>) -> ())! =
         { (data, declaration) in
             if declaration.memory.isContainer > 0 {
                 let containerInfo = clang_index_getObjCContainerDeclInfo(declaration)
@@ -160,7 +163,7 @@ class FrameworkDSLGenerator {
 
         let args = [
                 "-x", "objective-c",
-                "-F" + frameworkPath
+                "-F" + iOSSDKFrameworkPath
         ]
 
     	var translationUnit: CXTranslationUnit = nil
