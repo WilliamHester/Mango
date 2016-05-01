@@ -79,8 +79,8 @@ class FrameworkDSLGenerator {
             functions += "    func \(classNameToFunctionName(clazz))(views: (\(clazz)) -> ()) -> " +
                 "\(clazz) {\n"
             functions += "        let view = \(clazz)()\n"
-            functions += "        views(view)\n"
             functions += "        addChild(view)\n"
+            functions += "        views(view)\n"
             functions += "        return view\n"
             functions += "    }\n\n"
         }
@@ -92,10 +92,9 @@ class FrameworkDSLGenerator {
         var functions = "extension UIViewController {\n\n"
         for clazz in viewsList {
             functions += "    func \(classNameToFunctionName(clazz))(views: (\(clazz)) -> ()) {\n"
-//            functions += "        let view = \(clazz)()\n"
-//            functions += "        self.view = view\n"
-//            functions += "        views(view)\n"
-            functions += "        self.view.\(classNameToFunctionName(clazz))(views)\n"
+            functions += "        let view = \(clazz)()\n"
+            functions += "        self.view = view\n"
+            functions += "        views(view)\n"
             functions += "    }\n\n"
         }
         functions += "}\n"
